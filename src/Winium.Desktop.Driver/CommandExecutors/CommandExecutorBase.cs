@@ -44,16 +44,19 @@
             }
             catch (AutomationException exception)
             {
+                Logger.Log.Error($"Command '{GetType().Name}' failed: " + exception.Message, exception);
                 return CommandResponse.Create(HttpStatusCode.OK, this.JsonResponse(exception.Status, exception));
             }
             catch (NotImplementedException exception)
             {
+                Logger.Log.Error($"This command is not implemented: {GetType().Name}");
                 return CommandResponse.Create(
                     HttpStatusCode.NotImplemented,
                     this.JsonResponse(ResponseStatus.UnknownCommand, exception));
             }
             catch (Exception exception)
             {
+                Logger.Log.Error($"Failed to execute '{GetType().Name}': {exception.Message}", exception);
                 return CommandResponse.Create(
                     HttpStatusCode.OK,
                     this.JsonResponse(ResponseStatus.UnknownError, exception));

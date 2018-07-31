@@ -8,7 +8,7 @@
 
     #endregion
 
-    internal class Program
+    internal static class Program
     {
         #region Methods
 
@@ -24,19 +24,11 @@
                 {
                     listeningPort = options.Port.Value;
                 }
-            }
-
-            if (options.LogPath != null)
-            {
-                Logger.TargetFile(options.LogPath, options.Verbose);
-            }
-            else if (!options.Silent)
-            {
-                Logger.TargetConsole(options.Verbose);
-            }
-            else
-            {
-                Logger.TargetNull();
+                
+                if (!string.IsNullOrEmpty(options.LogConfig))
+                    Logger.LoadConfig(options.LogConfig);
+                else if (options.Silent)
+                    Logger.Silence();
             }
 
             try
@@ -50,7 +42,7 @@
             }
             catch (Exception ex)
             {
-                Logger.Fatal("Failed to start driver: {0}", ex);
+                Logger.Log.Fatal("Failed to start driver: {0}", ex);
                 throw;
             }
         }

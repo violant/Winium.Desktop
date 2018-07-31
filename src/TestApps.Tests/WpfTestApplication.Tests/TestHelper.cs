@@ -17,7 +17,7 @@ namespace WpfTestApplication.Tests
             return
                 element.GetType()
                     .GetProperty("Id", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.GetProperty)
-                    .GetValue(element, null)
+                    ?.GetValue(element, null)
                     .ToString();
         }
 

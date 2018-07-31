@@ -68,7 +68,7 @@
 
                 if (verbose)
                 {
-                    Logger.Debug("Sending request to inner driver: {0}", uri);
+                    Logger.Log.Debug($"Sending request to inner driver: {uri}");
                 }
 
                 // send the request and get the response
@@ -100,7 +100,7 @@
                 if (verbose)
                 {
                     // No need to log exceptions raised when sending service commands like ping.
-                    Logger.Error("Error occurred while trying to send request to inner driver: {0}", ex);
+                    Logger.Log.Error("Error occurred while trying to send request to inner driver: {0}", ex);
                 }
             }
             finally

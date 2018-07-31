@@ -51,7 +51,7 @@
         {
             this.Automator.WiniumKeyboard = new WiniumKeyboard(keyboardSimulatorType);
 
-            Logger.Debug("Current keyboard simulator: {0}", keyboardSimulatorType);
+            Logger.Log.Debug($"Current keyboard simulator: {keyboardSimulatorType}");
         }
 
         #endregion

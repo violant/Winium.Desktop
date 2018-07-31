@@ -44,7 +44,7 @@ namespace Winium.Desktop.Driver.CommandExecutors
                     break;
             }
 
-            Logger.Warn(message);
+            Logger.Log.Warn(message);
             return this.JsonResponse(ResponseStatus.UnknownError, message);
         }
 

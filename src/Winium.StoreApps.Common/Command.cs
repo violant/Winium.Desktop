@@ -58,15 +58,9 @@
         [JsonProperty("parameters")]
         public IDictionary<string, JToken> Parameters
         {
-            get
-            {
-                return this.commandParameters;
-            }
+            get => this.commandParameters;
 
-            set
-            {
-                this.commandParameters = value;
-            }
+            set => this.commandParameters = value;
         }
 
         /// <summary>

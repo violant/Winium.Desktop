@@ -26,21 +26,16 @@
 
         #region Public Properties
 
-        public static Dictionary<HttpStatusCode, string> StatusCodeDescriptors
-        {
-            get
-            {
-                return statusCodeDescriptors
-                       ?? (statusCodeDescriptors =
-                           new Dictionary<HttpStatusCode, string>
-                               {
-                                   { HttpStatusCode.OK, "OK" }, 
-                                   { HttpStatusCode.BadRequest, "Bad Request" }, 
-                                   { HttpStatusCode.NotFound, "Not Found" }, 
-                                   { HttpStatusCode.NotImplemented, "Not Implemented" }
-                               });
-            }
-        }
+        public static Dictionary<HttpStatusCode, string> StatusCodeDescriptors =>
+            statusCodeDescriptors
+            ?? (statusCodeDescriptors =
+                    new Dictionary<HttpStatusCode, string>
+                        {
+                            { HttpStatusCode.OK, "OK" }, 
+                            { HttpStatusCode.BadRequest, "Bad Request" }, 
+                            { HttpStatusCode.NotFound, "Not Found" }, 
+                            { HttpStatusCode.NotImplemented, "Not Implemented" }
+                        });
 
         #endregion
 

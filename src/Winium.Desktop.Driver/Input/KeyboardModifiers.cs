@@ -29,7 +29,7 @@
                 {
                     { Keys.Control, VirtualKeyCode.CONTROL }, 
                     { Keys.Shift, VirtualKeyCode.SHIFT }, 
-                    { Keys.Alt, VirtualKeyCode.MENU }, 
+                    { Keys.Alt, VirtualKeyCode.MENU } 
                 };
 
         #endregion

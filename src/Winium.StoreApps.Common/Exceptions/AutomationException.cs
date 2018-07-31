@@ -42,15 +42,9 @@
 
         public ResponseStatus Status
         {
-            get
-            {
-                return this.responseStatus;
-            }
+            get => this.responseStatus;
 
-            set
-            {
-                this.responseStatus = value;
-            }
+            set => this.responseStatus = value;
         }
 
         #endregion

@@ -46,7 +46,7 @@
             CruciatusFactory.Keyboard.KeyUp(key);
         }
 
-        public void SendKeys(char[] keysToSend)
+        public void SendKeys(IEnumerable<char> keysToSend)
         {
             var builder = keysToSend.Select(key => new KeyEvent(key)).ToList();
 
