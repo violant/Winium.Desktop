@@ -20,9 +20,6 @@
         [Option("url-base", Required = false, HelpText = "base URL path prefix for commands, e.g. wd/url")]
         public string UrlBase { get; set; }
 
-        [Option("verbose", Required = false, HelpText = "log verbosely")]
-        public bool Verbose { get; set; }
-
         [Option("silent", Required = false, HelpText = "log nothing")]
         public bool Silent { get; set; }
 

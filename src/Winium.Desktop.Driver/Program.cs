@@ -16,15 +16,17 @@
         private static void Main(string[] args)
         {
             var listeningPort = 9999;
-
+            var version = typeof(Program).Assembly.GetName().Version.ToString(3);
             var options = new CommandLineOptions();
+            Logger.Log.Info($"Running remote web driver version {version}");
+            Logger.Log.Info($"Running from {Environment.CurrentDirectory}");
             if (Parser.Default.ParseArguments(args, options))
             {
                 if (options.Port.HasValue)
                 {
                     listeningPort = options.Port.Value;
                 }
-                
+
                 if (!string.IsNullOrEmpty(options.LogConfig))
                     Logger.LoadConfig(options.LogConfig);
                 else if (options.Silent)
