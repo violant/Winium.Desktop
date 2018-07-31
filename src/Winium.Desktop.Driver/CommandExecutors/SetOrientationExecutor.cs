@@ -4,8 +4,8 @@ namespace Winium.Desktop.Driver.CommandExecutors
 
     using System;
 
-    using Winium.StoreApps.Common;
     using Winium.Cruciatus.Core;
+    using Winium.StoreApps.Common;
 
     #endregion using
 

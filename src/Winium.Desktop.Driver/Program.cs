@@ -4,6 +4,8 @@
 
     using System;
 
+    using CommandLine;
+
     #endregion
 
     internal class Program
@@ -16,7 +18,7 @@
             var listeningPort = 9999;
 
             var options = new CommandLineOptions();
-            if (CommandLine.Parser.Default.ParseArguments(args, options))
+            if (Parser.Default.ParseArguments(args, options))
             {
                 if (options.Port.HasValue)
                 {

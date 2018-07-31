@@ -2,9 +2,7 @@
 {
     #region using
 
-    using Winium.Cruciatus.Core;
     using Winium.Cruciatus.Extensions;
-    using Winium.StoreApps.Common;
 
     #endregion
 

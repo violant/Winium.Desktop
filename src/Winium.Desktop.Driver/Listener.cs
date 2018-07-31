@@ -43,10 +43,7 @@
 
         public static string UrnPrefix
         {
-            get
-            {
-                return urnPrefix;
-            }
+            get => urnPrefix;
 
             set
             {

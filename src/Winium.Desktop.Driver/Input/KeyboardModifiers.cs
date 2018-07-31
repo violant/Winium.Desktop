@@ -4,9 +4,9 @@
 
     using System.Collections.Generic;
 
-    using OpenQA.Selenium;
-
     using WindowsInput.Native;
+
+    using OpenQA.Selenium;
 
     #endregion
 

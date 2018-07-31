@@ -3,6 +3,7 @@
     #region using
 
     using System.Windows.Automation;
+
     using Winium.Cruciatus;
     using Winium.Cruciatus.Core;
     using Winium.StoreApps.Common;

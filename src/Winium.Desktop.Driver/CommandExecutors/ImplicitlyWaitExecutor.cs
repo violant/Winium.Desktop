@@ -5,7 +5,6 @@
     using System;
 
     using Winium.Cruciatus;
-    using Winium.StoreApps.Common;
 
     #endregion
 

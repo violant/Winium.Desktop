@@ -5,6 +5,7 @@
     using System.ComponentModel;
 
     using NLog;
+    using NLog.Config;
     using NLog.Targets;
 
     #endregion
@@ -49,7 +50,7 @@
         {
             var target = new ConsoleTarget { Layout = LayoutFormat };
 
-            NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(target, verbose ? LogLevel.Debug : LogLevel.Fatal);
+            SimpleConfigurator.ConfigureForTargetLogging(target, verbose ? LogLevel.Debug : LogLevel.Fatal);
             LogManager.ReconfigExistingLoggers();
         }
 
@@ -57,13 +58,13 @@
         {
             var target = new FileTarget { Layout = LayoutFormat, FileName = fileName };
 
-            NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(target, verbose ? LogLevel.Debug : LogLevel.Info);
+            SimpleConfigurator.ConfigureForTargetLogging(target, verbose ? LogLevel.Debug : LogLevel.Info);
             LogManager.ReconfigExistingLoggers();
         }
 
         public static void TargetNull()
         {
-            NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(new NullTarget());
+            SimpleConfigurator.ConfigureForTargetLogging(new NullTarget());
             LogManager.ReconfigExistingLoggers();
         }
 
