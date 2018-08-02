@@ -40,6 +40,7 @@
             {
                 var session = this.ExecutedCommand.SessionId;
                 this.Automator = Automator.InstanceForSession(session);
+                Logger.Log.Debug($"Executing command {this.ExecutedCommand}");
                 return CommandResponse.Create(HttpStatusCode.OK, this.DoImpl());
             }
             catch (AutomationException exception)

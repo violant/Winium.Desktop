@@ -24,15 +24,15 @@
 
         static AutomationPropertyHelper()
         {
-            Properties =
-                typeof(AutomationElementIdentifiers).GetFields(BindingFlags.Public | BindingFlags.Static)
-                    .Where(f => f.FieldType == typeof(AutomationProperty))
-                    .ToDictionary(f => f.Name, f => (AutomationProperty)f.GetValue(null));
+            Properties = typeof(AutomationElementIdentifiers).GetFields(BindingFlags.Public | BindingFlags.Static)
+                .Where(f => f.FieldType == typeof(AutomationProperty)).ToDictionary(
+                    f => f.Name,
+                    f => (AutomationProperty)f.GetValue(null));
         }
 
         #endregion
 
-        #region Public Methods and Operators
+        #region Methods
 
         internal static AutomationProperty GetAutomationProperty(string propertyName)
         {

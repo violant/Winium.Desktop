@@ -107,7 +107,9 @@
                 new CommandInfo("GET", "/session/{sessionId}/window_handles"));
             this.commandDictionary.Add(DriverCommand.GetCurrentUrl, new CommandInfo("GET", "/session/{sessionId}/url"));
             this.commandDictionary.Add(DriverCommand.Get, new CommandInfo("POST", "/session/{sessionId}/url"));
-            this.commandDictionary.Add(DriverCommand.GoForward, new CommandInfo("POST", "/session/{sessionId}/forward"));
+            this.commandDictionary.Add(
+                DriverCommand.GoForward,
+                new CommandInfo("POST", "/session/{sessionId}/forward"));
             this.commandDictionary.Add(DriverCommand.GoBack, new CommandInfo("POST", "/session/{sessionId}/back"));
             this.commandDictionary.Add(DriverCommand.Refresh, new CommandInfo("POST", "/session/{sessionId}/refresh"));
             this.commandDictionary.Add(

@@ -2,53 +2,53 @@
 {
     public enum ResponseStatus
     {
-        Success = 0, 
+        Success = 0,
 
-        NoSuchDriver = 6, 
+        NoSuchDriver = 6,
 
-        NoSuchElement = 7, 
+        NoSuchElement = 7,
 
-        NoSuchFrame = 8, 
+        NoSuchFrame = 8,
 
-        UnknownCommand = 9, 
+        UnknownCommand = 9,
 
-        StaleElementReference = 10, 
+        StaleElementReference = 10,
 
-        ElementNotVisible = 11, 
+        ElementNotVisible = 11,
 
-        InvalidElementState = 12, 
+        InvalidElementState = 12,
 
-        UnknownError = 13, 
+        UnknownError = 13,
 
-        ElementIsNotSelectable = 15, 
+        ElementIsNotSelectable = 15,
 
-        JavaScriptError = 17, 
+        JavaScriptError = 17,
 
-        XPathLookupError = 19, 
+        XPathLookupError = 19,
 
-        Timeout = 21, 
+        Timeout = 21,
 
-        NoSuchWindow = 23, 
+        NoSuchWindow = 23,
 
-        InvalidCookieDomain = 24, 
+        InvalidCookieDomain = 24,
 
-        UnableToSetCookie = 25, 
+        UnableToSetCookie = 25,
 
-        UnexpectedAlertOpen = 26, 
+        UnexpectedAlertOpen = 26,
 
-        NoAlertOpenError = 27, 
+        NoAlertOpenError = 27,
 
-        ScriptTimeout = 28, 
+        ScriptTimeout = 28,
 
-        InvalidElementCoordinates = 29, 
+        InvalidElementCoordinates = 29,
 
-        ImeNotAvailable = 30, 
+        ImeNotAvailable = 30,
 
-        ImeEngineActivationFailed = 31, 
+        ImeEngineActivationFailed = 31,
 
-        InvalidSelector = 32, 
+        InvalidSelector = 32,
 
-        SessionNotCreatedException = 33, 
+        SessionNotCreatedException = 33,
 
         MoveTargetOutOfBounds = 34
     }

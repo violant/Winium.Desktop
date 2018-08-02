@@ -20,11 +20,8 @@
 
             var boundingRect = element.Properties.BoundingRectangle;
 
-            var response = new Dictionary<string, object>
-                               {
-                                   { "width", boundingRect.Width }, 
-                                   { "height", boundingRect.Height }
-                               };
+            var response =
+                new Dictionary<string, object> { { "width", boundingRect.Width }, { "height", boundingRect.Height } };
             return this.JsonResponse(ResponseStatus.Success, response);
         }
 

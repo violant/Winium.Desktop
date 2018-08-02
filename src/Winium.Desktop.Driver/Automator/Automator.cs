@@ -45,7 +45,8 @@
 
         #region Public Methods and Operators
 
-        public static T GetValue<T>(IReadOnlyDictionary<string, object> parameters, string key) where T : class
+        public static T GetValue<T>(IReadOnlyDictionary<string, object> parameters, string key)
+            where T : class
         {
             object valueObject;
             parameters.TryGetValue(key, out valueObject);

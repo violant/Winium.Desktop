@@ -56,10 +56,9 @@
             // TODO: bad const
             const string ExecutorsNamespace = "Winium.Desktop.Driver.CommandExecutors";
 
-            var q =
-                (from t in Assembly.GetExecutingAssembly().GetTypes()
-                 where t.IsClass && t.Namespace == ExecutorsNamespace
-                 select t).ToArray();
+            var q = (from t in Assembly.GetExecutingAssembly().GetTypes()
+                     where t.IsClass && t.Namespace == ExecutorsNamespace
+                     select t).ToArray();
 
             var fields = typeof(DriverCommand).GetFields(BindingFlags.Public | BindingFlags.Static);
             foreach (var field in fields)

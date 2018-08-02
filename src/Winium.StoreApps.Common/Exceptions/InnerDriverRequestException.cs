@@ -1,6 +1,6 @@
 ﻿namespace Winium.StoreApps.Common.Exceptions
 {
-    #region
+    #region using
 
     using System;
     using System.Net;

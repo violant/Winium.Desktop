@@ -1,6 +1,6 @@
 ﻿namespace Winium.StoreApps.Common
 {
-    #region
+    #region using
 
     using System.Collections.Generic;
 
@@ -11,12 +11,6 @@
 
     public class Command
     {
-        #region Fields
-
-        private IDictionary<string, JToken> commandParameters = new JObject();
-
-        #endregion
-
         #region Constructors and Destructors
 
         public Command(string name, IDictionary<string, JToken> parameters)
@@ -56,12 +50,7 @@
         /// Gets the parameters of the command
         /// </summary>
         [JsonProperty("parameters")]
-        public IDictionary<string, JToken> Parameters
-        {
-            get => this.commandParameters;
-
-            set => this.commandParameters = value;
-        }
+        public IDictionary<string, JToken> Parameters { get; set; } = new JObject();
 
         /// <summary>
         /// Gets the SessionID of the command

@@ -8,7 +8,6 @@
 
     public static class JsonErrorCodes
     {
-        // TODO: in the future ResponseStatus will be removed in favor of HTTPStatus (see https://w3c.github.io/webdriver/webdriver-spec.html#handling-errors)
         #region Static Fields
 
         private static readonly Dictionary<ResponseStatus, string> ErrorMap = new Dictionary<ResponseStatus, string>();
@@ -57,5 +56,7 @@
         }
 
         #endregion
+
+        // TODO: in the future ResponseStatus will be removed in favor of HTTPStatus (see https://w3c.github.io/webdriver/webdriver-spec.html#handling-errors)
     }
 }

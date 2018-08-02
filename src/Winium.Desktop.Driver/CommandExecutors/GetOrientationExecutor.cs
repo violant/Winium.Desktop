@@ -6,7 +6,7 @@ namespace Winium.Desktop.Driver.CommandExecutors
     using Winium.StoreApps.Common;
 
     #endregion
-    
+
     internal class GetOrientationExecutor : CommandExecutorBase
     {
         #region Methods

@@ -14,11 +14,9 @@ namespace WpfTestApplication.Tests
 
         public static string GetElementId(IWebElement element)
         {
-            return
-                element.GetType()
-                    .GetProperty("Id", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.GetProperty)
-                    ?.GetValue(element, null)
-                    .ToString();
+            return element.GetType()
+                .GetProperty("Id", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.GetProperty)
+                ?.GetValue(element, null).ToString();
         }
 
         #endregion

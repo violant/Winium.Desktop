@@ -7,7 +7,7 @@ namespace Winium.Desktop.Driver.CommandExecutors
     using Winium.Cruciatus.Core;
     using Winium.StoreApps.Common;
 
-    #endregion using
+    #endregion
 
     internal class SetOrientationExecutor : CommandExecutorBase
     {
@@ -22,7 +22,7 @@ namespace Winium.Desktop.Driver.CommandExecutors
             }
 
             var orientation = (DisplayOrientation)Enum.Parse(
-                typeof(DisplayOrientation), 
+                typeof(DisplayOrientation),
                 this.ExecutedCommand.Parameters["orientation"].ToString());
 
             var result = RotationManager.SetOrientation(orientation);

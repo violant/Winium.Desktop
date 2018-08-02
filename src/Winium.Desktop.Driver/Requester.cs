@@ -37,11 +37,11 @@
 
         #region Public Methods and Operators
 
-        public string ForwardCommand(Command commandToForward, bool verbose = true, int timeout = 0)
+        public string ForwardCommand(Command commandToForward, int timeout = 0)
         {
             var serializedCommand = JsonConvert.SerializeObject(commandToForward);
 
-            var response = this.SendRequest(serializedCommand, verbose, timeout);
+            var response = this.SendRequest(serializedCommand, timeout);
             if (response.Key == HttpStatusCode.OK)
             {
                 return response.Value;
@@ -50,7 +50,7 @@
             throw new InnerDriverRequestException(response.Value, response.Key);
         }
 
-        public KeyValuePair<HttpStatusCode, string> SendRequest(string requestContent, bool verbose, int timeout)
+        public KeyValuePair<HttpStatusCode, string> SendRequest(string requestContent, int timeout)
         {
             var result = string.Empty;
             StreamReader reader = null;
@@ -66,10 +66,7 @@
                     request.Timeout = timeout;
                 }
 
-                if (verbose)
-                {
-                    Logger.Log.Debug($"Sending request to inner driver: {uri}");
-                }
+                Logger.Log.Debug($"Sending request to inner driver: {uri}");
 
                 // send the request and get the response
                 try
@@ -97,11 +94,7 @@
             }
             catch (Exception ex)
             {
-                if (verbose)
-                {
-                    // No need to log exceptions raised when sending service commands like ping.
-                    Logger.Log.Error("Error occurred while trying to send request to inner driver: {0}", ex);
-                }
+                Logger.Log.Error($"Error occurred while trying to send request to inner driver: {ex}");
             }
             finally
             {

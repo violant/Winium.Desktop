@@ -14,22 +14,15 @@
     {
         #region Static Fields
 
-        private static readonly List<string> Modifiers = new List<string>
-                                                             {
-                                                                 Keys.Control, 
-                                                                 Keys.LeftControl, 
-                                                                 Keys.Shift, 
-                                                                 Keys.LeftShift, 
-                                                                 Keys.Alt, 
-                                                                 Keys.LeftAlt
-                                                             };
+        private static readonly List<string> Modifiers =
+            new List<string> { Keys.Control, Keys.LeftControl, Keys.Shift, Keys.LeftShift, Keys.Alt, Keys.LeftAlt };
 
         private static readonly Dictionary<string, VirtualKeyCode> ModifiersMap =
             new Dictionary<string, VirtualKeyCode>
                 {
-                    { Keys.Control, VirtualKeyCode.CONTROL }, 
-                    { Keys.Shift, VirtualKeyCode.SHIFT }, 
-                    { Keys.Alt, VirtualKeyCode.MENU } 
+                    { Keys.Control, VirtualKeyCode.CONTROL },
+                    { Keys.Shift, VirtualKeyCode.SHIFT },
+                    { Keys.Alt, VirtualKeyCode.MENU }
                 };
 
         #endregion

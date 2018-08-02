@@ -22,7 +22,8 @@
 
         internal const string HelpArgumentsErrorMsg = "Arguments error. See {0} for more information.";
 
-        internal const string HelpUnknownScriptMsg = "Unknown script command '{0} {1}'. See {2} for supported commands.";
+        internal const string HelpUnknownScriptMsg =
+            "Unknown script command '{0} {1}'. See {2} for supported commands.";
 
         internal const string HelpUrlAutomationScript =
             "https://github.com/2gis/Winium.Desktop/wiki/Command-Execute-Script#use-ui-automation-patterns-on-element";
